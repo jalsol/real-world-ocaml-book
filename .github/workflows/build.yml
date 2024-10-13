@@ -52,14 +52,14 @@ jobs:
 
       - name: Upload artifacts (html, pdf, md, tex)
         if: runner.os == 'Linux'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: static
           path: ./_build/default/static
 
       - name: Upload PDF artifact
         if: runner.os == 'Linux'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: book.pdf
           path: ./_build/default/static/book.pdf
@@ -71,7 +71,7 @@ jobs:
 
       - name: Upload EPUB artifact
         if: runner.os == 'Linux'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: book.epub
           path: ./_build/default/static/book.epub
